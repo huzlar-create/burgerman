@@ -118,6 +118,7 @@ export type Database = {
           burger_name: string | null
           created_at: string
           id: string
+          price_kr: number | null
           restaurant_id: string
           score_bun: number | null
           score_overall: number
@@ -136,6 +137,7 @@ export type Database = {
           burger_name?: string | null
           created_at?: string
           id?: string
+          price_kr?: number | null
           restaurant_id: string
           score_bun?: number | null
           score_overall: number
@@ -154,6 +156,7 @@ export type Database = {
           burger_name?: string | null
           created_at?: string
           id?: string
+          price_kr?: number | null
           restaurant_id?: string
           score_bun?: number | null
           score_overall?: number
@@ -206,6 +209,7 @@ export type Database = {
           restaurant_id: string | null
           review_count: number | null
           slug: string | null
+          typical_price_kr: number | null
         }
         Relationships: []
       }
