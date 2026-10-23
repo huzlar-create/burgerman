@@ -1,4 +1,5 @@
 import { createServerClient } from "@supabase/ssr";
+import { supabaseKey, supabaseUrl } from "@/lib/supabase/config";
 import { NextResponse, type NextRequest } from "next/server";
 
 // Holder login-sessionen frisk på de sider, der kræver login
@@ -6,8 +7,8 @@ export async function middleware(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    supabaseUrl,
+    supabaseKey,
     {
       cookies: {
         getAll() {
