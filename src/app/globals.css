@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Pølsevognen: farver fra stilguiden */
+:root {
+  --ketchup: #d62828;
+  --sennep: #ffb703;
+  --agurk: #6a994e;
+  --bolle: #fff7e0;
+  --ristet: #2a1a12;
+  --kort: #ffffff;
+  --tekst: var(--ristet);
+  --baggrund: var(--bolle);
+  --streg: var(--ristet);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --baggrund: #2a1a12;
+    --tekst: #fff7e0;
+    --kort: #3a261b;
+    --streg: #fff7e0;
+  }
+}
+
+@theme inline {
+  --color-ketchup: var(--ketchup);
+  --color-sennep: var(--sennep);
+  --color-agurk: var(--agurk);
+  --color-bolle: var(--bolle);
+  --color-ristet: var(--ristet);
+  --color-kort: var(--kort);
+  --color-tekst: var(--tekst);
+  --color-baggrund: var(--baggrund);
+  --color-streg: var(--streg);
+  --font-display: var(--font-bungee), "Arial Black", sans-serif;
+  --font-sans: var(--font-barlow), system-ui, sans-serif;
+  --radius-kort: 12px;
+}
+
+body {
+  background: var(--baggrund);
+  color: var(--tekst);
+  font-family: var(--font-sans);
+}
+
+.striber {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0 18px,
+    rgba(214, 40, 40, 0.06) 18px 36px
+  );
+}
+
+.tal {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
